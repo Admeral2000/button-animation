@@ -1,0 +1,80 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #303030;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    gap: 300px;
+    width: 1200px;
+    margin: 0 auto;
+    padding: 450px 0;
+    padding-bottom: 0;
+}
+
+.plus-button  {
+    display: flex;
+    justify-content: center;
+    margin-left: 310px;
+}
+.x-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    transform-origin: bottom left;
+    transform: rotate(-90deg);
+}
+
+.menu-bar {
+    letter-spacing: 40px;
+
+}
+
+.menu-bar>img {
+    visibility: hidden;
+}
+
+.plus-button:hover {
+    animation: plus 0.5s ease 0.3s 1;
+    animation-direction:alternate;
+    animation-fill-mode:inherit ;
+}
+.x-button>img:hover {
+    animation: plus 0.5s ease 0.3s 1;
+    animation-direction:alternate;
+    animation-fill-mode:inherit ;
+    transition-delay: 0.7s;
+    transform: rotate(45deg);
+}
+
+@keyframes plus {
+    0% {
+        transform: rotate(0deg) scale(1.2);
+    }
+    100% {
+        transform: rotate(405deg) scale(1.2);
+    }
+}
+
+.x-button:hover>.menu-bar>img {
+    visibility:visible ;
+    transition: 0.8s;
+    transition-delay: 1s;
+}
+
+.x-button:hover>.menu-bar>.animate__heartBeat {
+    animation-duration: 3s;
+}
+
+.x-button:hover>.menu-bar>img {
+    animation:button 0.9s ease-in-out 0.5s 1 alternate inherit;
+    transform: rotate(90deg);
+}
+
